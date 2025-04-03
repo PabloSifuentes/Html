@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>User</title>
 </head>
 <body>
     <form method="POST" action="api/login">
         <div style="text-align: center;">
-        <h2>Register</h2>
+        <h2>Usuario</h2>
+        <br>
         <label for="name"><b>Name</b></label><br/>
         <input type="text" id="me" name="me" placeholder="Informe seu nome">
         <br/>
@@ -24,10 +25,11 @@
         <label for="pw"><b>Password</b> </label><br/>
         <input type="text" id="pw" name="pw" placeholder="Informe sua senha">
         <br/>
-        <input type="checkbox" id="ck" name="ck">
-        <label for="ck">Aceite de termos</label><br/>
-        <input type="submit" value="Confirmar">
+        <label for="pw"><b>Registration date</b> </label><br/>
+        <input type="text" id="date" name="date" placeholder="Informe a data">
+        <br/>
+        <input type="submit" value="Confirm">  <input type="submit" value="To go back">
+        </div>
       </form>
-    </div>
 </body>
 </html>

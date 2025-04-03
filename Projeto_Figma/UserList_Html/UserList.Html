@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Usuario</title>
+</head>
+<head>
+<link rel="stylesheet" href="Tabela.css/index.css">
+<link rel="stylesheet" href="Tabela.css/index.js">
+</head>
+<body>
+    <div style="text-align: center;">
+    <h3>Userlist</h3>
+    <h2>Filtro</h2>
+    <div>
+        <input
+        type="text"
+        id="pesquisar-tabela"
+        placeholder="Digite para filtrar..."
+        onkeyup="filtrarTabela()">
+        <span class="icone-pesquisa">🔍</span>
+    </div>
+
+    <table id="minha-tabela" class="tabela-sombreada">
+        <thead>
+          <tr>
+            <th>Edit</th>
+            <th>Delet</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Tephone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+                <a href="....." class="icone-imagem">
+                    <img src="imagens/icon_edit.svg" alt="icone editar">
+                </a>
+            </td>
+            <td>
+                <a href="User_Html/user.Html" class="icone-imagem">
+                    <img src="imagens/delet_icon.svg" alt="icone editar">
+                </a>
+            </td>
+            <td>João</td>
+            <td>joão@gmail.com</td>
+            <td>47985959</td>
+          </tr>
+          <tr>
+            <td>
+                <a href="....." class="icone-imagem">
+                    <img src="imagens/icon_edit.svg" alt="icone editar">
+                </a>
+            </td>
+            <td>
+                <a href="....." class="icone-imagem">
+                    <img src="imagens/delet_icon.svg" alt="icone editar">
+                </a>
+            <td>Maria</td>
+            <td>maria@gmail.com</td>
+            <td>47989858</td>
+          </tr>
+        </tbody>
+      </table>
+    <br>
+</div>
+</body>
+</html>
