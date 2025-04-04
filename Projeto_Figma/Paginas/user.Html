@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Usuário</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .user-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            z-index: 2;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: all 0.4s ease;
+        }
+        
+        .user-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .user-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        
+        .user-header h1 {
+            color: white;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .user-details {
+            margin-bottom: 30px;
+        }
+        
+        .detail-group {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .detail-label {
+            display: block;
+            margin-bottom: 5px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            font-weight: 400;
+        }
+        
+        .detail-value {
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .password-value {
+            letter-spacing: 2px;
+            font-family: monospace;
+        }
+        
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 15px;
+        }
+        
+        .user-button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        
+        .confirm-btn {
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.8), rgba(39, 174, 96, 0.8));
+            color: white;
+        }
+        
+        .confirm-btn:hover {
+            background: linear-gradient(135deg, rgba(46, 204, 113, 1), rgba(39, 174, 96, 1));
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .close-btn {
+            background: linear-gradient(135deg, rgba(231, 76, 60, 0.8), rgba(192, 57, 43, 0.8));
+            color: white;
+        }
+        
+        .close-btn:hover {
+            background: linear-gradient(135deg, rgba(231, 76, 60, 1), rgba(192, 57, 43, 1));
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <div class="user-container">
+        <div class="user-header">
+            <h1>Detalhes do Usuário</h1>
+        </div>
+        
+        <div class="user-details">
+            <div class="detail-group">
+                <span class="detail-label">Nome</span>
+                <div class="detail-value">João</div>
+            </div>
+            
+            <div class="detail-group">
+                <span class="detail-label">Sobrenome</span>
+                <div class="detail-value">Silva</div>
+            </div>
+            
+            <div class="detail-group">
+                <span class="detail-label">Email</span>
+                <div class="detail-value">joão@gmail.com</div>
+            </div>
+            
+            <div class="detail-group">
+                <span class="detail-label">Telefone</span>
+                <div class="detail-value">(47) 9898-9898</div>
+            </div>
+            
+            <div class="detail-group">
+                <span class="detail-label">Senha</span>
+                <div class="detail-value password-value">••••••••</div>
+            </div>
+            
+            <div class="detail-group">
+                <span class="detail-label">Data de cadastro</span>
+                <div class="detail-value">10/05/2023</div>
+            </div>
+        </div>
+        
+        <div class="button-group">
+            <button class="user-button confirm-btn">Confirmar</button>
+            <button class="user-button close-btn">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Biblioteca de partículas -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Configuração das partículas
+        particlesJS('particles-js', {
+            particles: {
+                number: { 
+                    value: 80, 
+                    density: { 
+                        enable: true, 
+                        value_area: 800 
+                    } 
+                },
+                color: { 
+                    value: "#ffffff" 
+                },
+                shape: { 
+                    type: "circle" 
+                },
+                opacity: { 
+                    value: 0.5, 
+                    random: true 
+                },
+                size: { 
+                    value: 3, 
+                    random: true 
+                },
+                line_linked: { 
+                    enable: true, 
+                    distance: 150, 
+                    color: "#ffffff", 
+                    opacity: 0.2, 
+                    width: 1 
+                },
+                move: { 
+                    enable: true, 
+                    speed: 2, 
+                    direction: "none", 
+                    random: true, 
+                    straight: false, 
+                    out_mode: "out" 
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { 
+                        enable: true, 
+                        mode: "repulse" 
+                    },
+                    onclick: { 
+                        enable: true, 
+                        mode: "push" 
+                    }
+                },
+                modes: {
+                    repulse: {
+                        distance: 100,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+
+        // Adicionando máscara para o telefone
+        const phoneValue = document.querySelector('.detail-group:nth-child(4) .detail-value');
+        const originalPhone = "47989898";
+        const formattedPhone = `(${originalPhone.substring(0,2)}) ${originalPhone.substring(2,6)}-${originalPhone.substring(6)}`;
+        phoneValue.textContent = formattedPhone;
+
+        // Adicionando interação aos botões
+        document.querySelector('.confirm-btn').addEventListener('click', () => {
+            alert('Alterações confirmadas com sucesso!');
+        });
+
+        document.querySelector('.close-btn').addEventListener('click', () => {
+            alert('Janela fechada');
+            // Em um caso real, aqui você fecharia o modal ou redirecionaria
+        });
+    </script>
+</body>
+</html>
