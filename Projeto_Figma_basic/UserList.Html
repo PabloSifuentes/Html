@@ -34,8 +34,8 @@
                 <tbody>
                     <tr>
                         <td>
-                            <button class="btn-edit"><i class="fas fa-edit"></i></button>
-                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                            <a th:href="@{'/visualizarusuario/' + ${usuario.id}}" class="btn-edit"><i class="fas fa-edit"></i></a>
+                            <button th:data-usuario-id="${usuario.id}" class="btn-delete"><i class="fas fa-trash"></i></button>
                         </td>
                         <td>João Silva</td>
                         <td>joao@gmail.com</td>
